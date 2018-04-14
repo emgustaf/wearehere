@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Personal Page</title>
+  <title>Here for You</title>
   <link rel="stylesheet" type="text/css" href="public/reset.css">
   <link rel="stylesheet" type="text/css" href="public/style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto|Bitter|Lobster" rel="stylesheet">
@@ -14,83 +14,70 @@
 <body>
   <header>
     <div class="logo">
-      <img id="logo" src="public/img/mlh-logo.png" />
+        <p>Dartmouth--Here for You</p>
+
     </div>
     <nav>
       <ul>
-        <li><a href="#about">about</a></li>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="#makearreport">Make a Report</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#immediatehelp">Immediate Help</a></li>
+        <li><a href="#getinvolved">Get Involved</a></li>
+        <li><a href="#aboutus">About Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <div class="headline">
-      <h1>Hi, I'm Emma Gustafson!</h1>
-      <h2>I'm an (engineer/developer/data scientist/artist).</h2>
-    </div>
 
-    <div class="row">
-      <div class="col">
-        <img id="desktop" src="public/img/desktop.png" />
-      </div>
-      <div class="col">
-        <p>
-          I'm available for opportunities in front end web development beginning July of 2018.
-        </p>
-      </div>
-    </div>
-  </main>
-
-  <section id="about">
-    <div class="row top">
-      <h3>About</h3>
-    </div>
-    <div class="row bottom">
-      <div class="col">
-        <p>Here is some info about me</p>
-      </div>
-      <div class="col">
-        <p>Here is some info about my education</p>
-      </div>
-      <div class="col">
-        <p>Here is some info about my projects</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h3>Projects</h3>
-      <div class="row">
-        <div class="col">
-          <img  src="public/img/hackathon-project.png" />
-          <a href="#">Hackathon Projects</a>
-        </div>
-        <div class="col">
-          <img  src="public/img/school-project.png" />
-          <a href="#">School Projects</a>
-        </div>
-        <div class="col">
-          <img src="public/img/personal-project.png" />
-          <a href="#">Personal Projects</a>
-        </div>
-      </div>
-  </section>
-
-  <footer>
-    <h3 id="contact">Contact</h3>
-    <p>
-      Your Name Here | Email Address | @twitter_handle
-    </p>
-    <div>
-      <i class="fa fa-github fa-3x" aria-hidden="true"></i>
-      <i class="fa fa-linkedin fa-3x" aria-hidden="true"></i>
-      <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
-      <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
-      <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
-    </div>
-  </footer>
-
-</body>
+  <body>
+    <form action="/my-handling-form-page" method="post">
+          <div>
+              <label for="name">Your name:</label>
+              <input type="text" id="name" name="user_name">
+          </div>
+          <div>
+              <label for="perpetrator">Perpetrator name (if known):</label>
+              <input type="text" id="perpetrator" name="perp_name">
+          </div>
+          <div>
+              <label for="perp_descrip">Description of the perpetrator:</label>
+              <textarea id="msg" name="perp_descrip"></textarea>
+          </div>
+          <div>
+              <label for="location">Location:</label>
+              <input type="text" id="location" name="location">
+          </div>
+          <div>
+              <label for="date">Date:</label>
+              <input type="text" id="date" name="date">
+          </div>
+          <div>
+              <label for="time">Time:</label>
+              <input type="text" id="time" name="time">
+          </div>
+          <div>
+              <label for="incident">Description of incident:</label>
+              <textarea id="msg" name="incident"></textarea>
+          </div>
+          <div>
+              <label for="contact">Who have you contacted about this incident (N/A if no one):</label>
+              <textarea id="msg" name="contact"></textarea>
+          </div>
+          <div>
+              <input id="nocontact" type="checkBox" name="nocontact">
+              <label for="nocontact">I do not wish to be contacted further</label>
+          </div>
+          <div>
+              <input id="talk" type="checkBox" name="talk">
+              <label for="talk">I would like to talk to someone</label>
+          </div>
+          <div>
+              <input id="legal" type="checkBox" name="legal">
+              <label for="legal">I would like to take legal action</label>
+          </div>
+          <div class="button">
+            <button type="submit">Next</button>
+          </div>
+    </form>
+  </body>
 </html>
