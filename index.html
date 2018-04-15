@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Here for You</title>
-  <link rel="stylesheet" type="text/css" href="public/reset.css">
-  <link rel="stylesheet" type="text/css" href="public/style.css">
+  <link rel="stylesheet" type="text/css" href="static/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto|Bitter|Lobster" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -15,61 +15,74 @@
   <section id="report">
 
     <form action="/my-handling-form-page" method="post">
-          <legend><span class="number">1</span>Preliminary Information</legend>
+          <legend><span class="number">1</span> Preliminary Information</legend>
+
 
           <div>
-              <label for="name">Your name:</label>
+              <label for="name">Your name</label>
               <input type="text" id="name" name="user_name">
           </div>
           <div>
-              <label for="perpetrator">Perpetrator name (if known):</label>
+              <label for="perpetrator">Perpetrator name (if known)</label>
               <input type="text" id="perpetrator" name="perp_name">
           </div>
 
-          <legend><span class="number">2</span>Incident Details</legend>
-
           <div>
-              <label for="perp_descrip">Description of the perpetrator:</label>
+              <label for="perp_descrip">Description of the perpetrator</label>
               <textarea id="msg" name="perp_descrip"></textarea>
           </div>
-          <div>
-              <label for="location">Location:</label>
-              <input type="text" id="location" name="location">
-          </div>
-          <div>
-              <label for="date">Date:</label>
-              <input type="text" id="date" name="date">
-          </div>
-          <div>
-              <label for="time">Time:</label>
-              <input type="text" id="time" name="time">
-          </div>
-          <div>
-              <label for="incident">Description of incident:</label>
-              <textarea id="msg" name="incident"></textarea>
-          </div>
-          <div>
-              <label for="contact">Who have you contacted about this incident (N/A if no one):</label>
-              <textarea id="msg" name="contact"></textarea>
-          </div>
+
+
+          <legend><span class="number">2</span> Incident Details</legend>
+
+            <div>
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location">
+            </div>
+            <div>
+                <label for="date">Date</label>
+                <input type="text" id="date" name="date">
+            </div>
+            <div>
+                <label for="time">Time</label>
+                <input type="text" id="time" name="time">
+            </div>
+            <div>
+                <label for="incident"> Description of incident</label>
+                <textarea id="msg" name="incident"></textarea>
+            </div>
+            <div>
+                <label for="contact">Who have you contacted about this incident (N/A if no one)</label>
+                <textarea id="msg" name="contact"></textarea>
+            </div>
+
 
           <legend><span class="number">3</span>Contact Options</legend>
+          <div class="checkbox">
+            <div class="inline-field">
+              <label for="nocontact">
+                <input id="nocontact" type="checkBox" name="nocontact">
+                I do not wish to be contacted further
+              </label>
+            </div>
+            <div class="inline-field">
+              <label for="talk">
+                <input id="talk" type="checkBox" name="talk">
+                I would like to talk to someone
+              </label>
+            </div>
+            <div class="inline-field">
+              <label for="legal">
+                <input id="legal" type="checkBox" name="legal">
+                I would like to take legal action
+              </label>
+            </div>
+          </div>
+          
 
-          <div>
-              <input id="nocontact" type="checkBox" name="nocontact">
-              <label for="nocontact">I do not wish to be contacted further</label>
-          </div>
-          <div>
-              <input id="talk" type="checkBox" name="talk">
-              <label for="talk">I would like to talk to someone</label>
-          </div>
-          <div>
-              <input id="legal" type="checkBox" name="legal">
-              <label for="legal">I would like to take legal action</label>
-          </div>
-          <div class="button">
-            <button type="submit">Next</button>
-          </div>
+          
+          <button type="submit">Next</button>
+          
     </form>
   </section>
 
