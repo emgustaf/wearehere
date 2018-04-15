@@ -1,5 +1,5 @@
 body {
-  background-color: #162f51;
+  background-color: #FFFFFF;
   text-align: center;
   font-family: 'Roboto', sans-serif;
 }
@@ -18,7 +18,32 @@ form {
   padding: 1em;
   border: 1px solid #CCC;
   border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+
+.number {
+    background: #1abc9c;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+legend {
+    text-align: left;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
 
 form div + div {
   margin-top: 1em;
@@ -62,6 +87,7 @@ button {
      between the labels and their text fields */
   margin-left: .5em;
 }
+
 /**I think this is where my form stuff ends*/
 
 .logo {
